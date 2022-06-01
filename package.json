@@ -1,0 +1,26 @@
+{
+  "name": "chrome-extension-sandbox",
+  "version": "0.1.0",
+  "description": "My Chrome Sandbox Extensions",
+  "main": "manifest.json",
+  "standard": {
+    "globals": ["chrome"]
+  },
+  "scripts": {
+    "npm:install:global": "npm install -g standard",
+    "setup": "npm run npm:install:global",
+    "standard": "standard **/*.js --fix --verbose",
+    "lint:js": "npm run standard",
+    "lint": "npm run lint:js",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "sandbox",
+    "hello",
+    "world"
+  ],
+  "author": "JCGuerrero",
+  "license": "SEE LICENSE IN LICENSE.md"
+}

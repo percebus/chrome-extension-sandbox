@@ -3,7 +3,7 @@
   const divHTMLElement = document.getElementById('options')
   const selector = 'current'
 
-  function handleButtonClick (event) {
+  function on_click (event) {
     const parentElement = event.target.parentElement
     const current = parentElement.querySelector(`.${selector}`) || event.target
     if (current !== event.target) {
@@ -26,7 +26,7 @@
         buttonHTMLElement.classList.add(selector)
       }
 
-      buttonHTMLElement.addEventListener('click', handleButtonClick)
+      buttonHTMLElement.addEventListener('click', on_click)
       divHTMLElement.appendChild(buttonHTMLElement)
     }
   })

@@ -6,7 +6,7 @@
     buttonHTMLElement.style.backgroundColor = color
   })
 
-  function on_click() {
+  function on_click () {
     chrome.storage.sync.get('color', ({ color }) => {
       console.log('executeScript %cbackgroundColor', `color: ${color}`)
       document.body.style.backgroundColor = color

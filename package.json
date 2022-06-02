@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "description": "My Chrome Sandbox Extensions",
   "main": "manifest.json",
-  "standard": {
-    "globals": ["chrome"]
+  "standardx": {
+    "global": [
+      "chrome"
+    ]
   },
   "scripts": {
-    "npm:install:global": "npm install -g standard",
+    "npm:install:global": "npm install --location=global yarn",
     "setup": "npm run npm:install:global",
-    "standard": "standard **/*.js --fix --verbose",
-    "lint:js": "npm run standard",
+    "standardx": "standardx **/*.js --fix --verbose",
+    "lint:js": "npm run standardx",
     "lint": "npm run lint:js",
     "test": "npm run lint"
   },
@@ -22,5 +24,8 @@
     "world"
   ],
   "author": "JCGuerrero",
-  "license": "SEE LICENSE IN LICENSE.md"
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "standardx": "^3.0.0"
+  }
 }

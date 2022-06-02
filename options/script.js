@@ -1,5 +1,6 @@
 (() => {
   'use strict'
+
   const divHTMLElement = document.getElementById('options')
   const selector = 'current'
 

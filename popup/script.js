@@ -1,21 +1,23 @@
 (() => {
   'use strict'
-  const changeColor = document.getElementById('changeColor')
 
+  const buttonHTMLElement = document.getElementById('changeColor')
   chrome.storage.sync.get('color', ({ color }) => {
-    changeColor.style.backgroundColor = color
+    buttonHTMLElement.style.backgroundColor = color
   })
 
-  changeColor.addEventListener('click', async () => {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+  function on_click() {
+    chrome.storage.sync.get('color', ({ color }) => {
+      console.log('executeScript %cbackgroundColor', `color: ${color}`)
+      document.body.style.backgroundColor = color
+    })
+  }
+
+  buttonHTMLElement.addEventListener('click', async () => {
+    const [currentTab] = await chrome.tabs.query({ active: true, currentWindow: true })
     chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      function: () => {
-        chrome.storage.sync.get('color', ({ color }) => {
-          console.log('executeScript %cbackgroundColor', `color: ${color}`)
-          document.body.style.backgroundColor = color
-        })
-      }
+      target: { tabId: currentTab.id },
+      function: on_click
     })
   })
 })()

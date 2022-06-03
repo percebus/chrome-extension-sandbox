@@ -9,11 +9,13 @@
     ]
   },
   "scripts": {
-    "npm:install:global": "npm install --location=global yarn",
+    "npm:install:global": "npm install --location=global yarn grunt-cli",
     "setup": "npm run npm:install:global",
-    "standardx": "standardx **/*.js --fix --verbose",
-    "lint:js": "npm run standardx",
-    "lint": "npm run lint:js",
+    "grunt": "grunt --color --verbose",
+    "grunt:lint": "npm run grunt -- lint",
+    "grunt:dist": "npm run grunt -- dist",
+    "lint": "npm run grunt:lint",
+    "dist": "npm run grunt:dist",
     "test": "npm run lint"
   },
   "keywords": [
@@ -26,6 +28,15 @@
   "author": "JCGuerrero",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
+    "gobble-es6-transpiler": "^0.1.2",
+    "grunt": "^1.5.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^5.2.1",
+    "grunt-htmllint": "^0.3.0",
+    "grunt-jsonlint": "^2.1.3",
+    "grunt-shell": "^4.0.0",
+    "load-grunt-tasks": "^5.1.0",
     "standardx": "^3.0.0"
   }
 }

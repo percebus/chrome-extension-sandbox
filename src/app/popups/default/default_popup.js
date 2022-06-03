@@ -1,7 +1,7 @@
 (() => {
   'use strict'
 
-  const buttonHTMLElement = document.getElementById('changeColor')
+  const buttonHTMLElement = document.getElementById('change_color')
   chrome.storage.sync.get('color', ({ color }) => {
     buttonHTMLElement.style.backgroundColor = color
   })

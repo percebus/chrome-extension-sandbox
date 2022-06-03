@@ -5,10 +5,10 @@
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting"],
   "background": {
-    "service_worker": "background/service_worker.js"
+    "service_worker": "background/service_worker.min.js"
   },
-  "options_page": "options/default.html",
+  "options_page": "options/options.html",
   "action": {
-    "default_popup": "popup/default.html"
+    "default_popup": "popups/default/default_popup.html"
   }
 }

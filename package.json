@@ -25,7 +25,7 @@
     "hello",
     "world"
   ],
-  "author": "JCGuerrero",
+  "author": "percebus",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "gobble-es6-transpiler": "^0.1.2",
@@ -37,6 +37,6 @@
     "grunt-jsonlint": "^2.1.3",
     "grunt-shell": "^4.0.0",
     "load-grunt-tasks": "^5.1.0",
-    "standardx": "^3.0.0"
+    "standardx": "latest"
   }
 }

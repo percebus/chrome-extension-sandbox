@@ -13,7 +13,6 @@ module.exports = (grunt) => {
     },
     htmllint: {
       options: { force: true, htmllintrc: true },
-      htmllint: ['.htmllintrc'],
       index: ['src/app/**/*.html']
     },
     clean: {
@@ -40,5 +39,11 @@ module.exports = (grunt) => {
     }
   })
 
+  grunt.registerTask('lint:json', ['jsonlint'])
+  grunt.registerTask('lint:html', ['htmllint'])
+  grunt.registerTask('lint', ['lint:json', 'lint:html'])
+
   grunt.registerTask('dist', ['clean', 'copy', 'uglify'])
+
+  grunt.registerTask('default', ['lint'])
 }

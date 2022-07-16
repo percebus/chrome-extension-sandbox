@@ -1,5 +1,5 @@
 {
-  "name": "chrome-extension-sandbox",
+  "name": "chrome-extension-tutorials-app",
   "version": "0.1.0",
   "description": "My Chrome Sandbox Extensions",
   "main": "manifest.json",

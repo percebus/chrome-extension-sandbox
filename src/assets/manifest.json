@@ -1,5 +1,5 @@
 {
-  "name": "hello-chrome-extension",
+  "name": "chrome-extension-tutorials-app",
   "description": "Getting started with Chrome Extensions",
   "version": "0.1.0",
   "manifest_version": 3,

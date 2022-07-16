@@ -1,7 +1,8 @@
-# `hello-chrome-extension`
+# `chrome-extension-tutorials-app`
 
-This is a repo following the Google Developer [Getting started
-](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
+[![verify](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/verify.yml/badge.svg)](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/verify.yml) [![dependency review](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/dependency-review.yml)
+
+This is a repo following the Google Developer [Getting started](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
 
 Altho, since Edge works on chromium, `chrome` API is also available.
 
@@ -15,19 +16,19 @@ $> npm run setup
 
 ### Dependencies
 
+[![dependency review](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/dependency-review.yml)
+
 ```bash
 $> npm install
 ```
 
-## Development
+## R&D
 
-### Lint
+[![verify](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/verify.yml/badge.svg)](https://github.com/percebus/chrome-extension-tutorials-app/actions/workflows/verify.yml)
 
-```bash
-$> npm run lint
-```
+### Build
 
-### Build `dist/`
+#### `dist/`
 
 ```bash
 $> npm run dist

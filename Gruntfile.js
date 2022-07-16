@@ -37,22 +37,8 @@ module.exports = (grunt) => {
           'dist/popups/default/default_popup.min.js': ['src/app/popups/default/default_popup.js']
         }
       }
-    },
-    shell: {
-      options: { stderr: true },
-      standardx: 'standardx --fix __tests__/**/*.js',
-      standardx_Gruntfile: 'standardx --fix Gruntfile.js'
     }
   })
 
-  grunt.registerTask('lint:js:Gruntfile', ['shell:standardx_Gruntfile'])
-  grunt.registerTask('lint:js', ['shell:standardx'])
-  grunt.registerTask('lint:json', ['jsonlint'])
-  grunt.registerTask('lint:html', ['htmllint'])
-  grunt.registerTask('lint', ['lint:json', 'lint:html', 'lint:js'])
-
-  grunt.registerTask('dist', ['lint', 'clean', 'copy', 'uglify'])
-
-  grunt.registerTask('default', ['lint'])
-  grunt.task.run('lint:js:Gruntfile')
+  grunt.registerTask('dist', ['clean', 'copy', 'uglify'])
 }

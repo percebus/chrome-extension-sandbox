@@ -11,12 +11,20 @@
   "scripts": {
     "npm:install:global": "npm install --location=global yarn grunt-cli",
     "setup": "npm run npm:install:global",
+    "standardx": "standardx --fix *.js __tests__/**/*.js",
+    "pregrunt": "npm run standardx",
     "grunt": "grunt --color --verbose",
-    "grunt:lint": "npm run grunt -- lint",
+    "grunt:jsonlint": "npm run grunt -- jsonlint",
+    "grunt:htmllint": "npm run grunt -- htmllint",
     "grunt:dist": "npm run grunt -- dist",
-    "lint": "npm run grunt:lint",
-    "dist": "npm run grunt:dist",
-    "test": "npm run lint"
+    "lint:json": "npm run grunt:jsonlint",
+    "lint:html": "npm run grunt:htmllint",
+    "lint:js": "npm run standardx",
+    "lint": "npm run lint:json && npm run lint:html && npm run lint:js",
+    "pretest": "npm run lint",
+    "test": "exit 0",
+    "predist": "npm test",
+    "dist": "npm run grunt:dist"
   },
   "keywords": [
     "chrome",
@@ -35,7 +43,6 @@
     "grunt-contrib-uglify": "^5.2.1",
     "grunt-htmllint": "^0.3.0",
     "grunt-jsonlint": "^2.1.3",
-    "grunt-shell": "^4.0.0",
     "load-grunt-tasks": "^5.1.0",
     "standardx": "latest"
   }
